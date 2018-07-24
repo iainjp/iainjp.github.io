@@ -1,18 +1,13 @@
 ---
-format: single
-title: About
-permalink: /about/
+title: "About"
+description: "About Iain Pritchard"
+categories:
+ - "about"
+date: "2017-12-24T11:12:37Z"
+draft: false
+permalink: "/about"
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I'm a Software Engineer currently working at Skyscanner, helping to continuously deliver value to our customers through our products in our Growth initiative.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+When I'm not trying to make improvements to myself and how I live and work, you'll likely find me chatting rubbish on [Twitter](https://www.twitter.com/iainjames9).
