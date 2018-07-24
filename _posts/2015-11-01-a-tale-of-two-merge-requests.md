@@ -6,6 +6,7 @@ tags:
  - "git"
  - "getting things done"
  - "process"
+permalink: "posts/a-tale-of-two-merge-requests"
 ---
 
 With the new intake of graduates settling into their roles at my job, all fresh-faced and eager to learn the tricks of their trade, we have to remember that they are not the only ones with things still left to learn. As a graduate from last years intake (now relegated to "Old Grad") this was all too relevant for me last week, when I learned a lesson in Getting Things Done, or in this case, Getting Smaller Things Done And Not Making Too Many Sweeping Changes to Code, Especially If Others Are Working On That Code At The Same Time (not as catchy). 

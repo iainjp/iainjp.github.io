@@ -6,6 +6,7 @@ tags:
  - "ghost"
  - "github"
  - "docker"
+permalink: "posts/from-jekyll-to-ghost"
 ---
 
 When I started this blog ([on a bit of a whim](https://iainjp.com/up-and-running/)), it was intended as a place to braindump some topics and opinions and little guides in a _“this was good; this is how i did it”_ way.
@@ -18,7 +19,7 @@ That’s when I started looking around at other solutions that I could have a pl
 
 Ghost is a beautiful Patrick Swayze movie about sexy pottery making.
 
-![](/img/from-jekyll-to-ghost/Ghost-patrick-swayze-31227069-2560-1722.jpg)
+![](/assets/images/from-jekyll-to-ghost/Ghost-patrick-swayze-31227069-2560-1722.jpg)
 
 **It’s also a blogging platform**. Unlike Wordpress, that’s become this crazy giant multi-missioned platform that powers so much of internet in lots of different ways, Ghost aims to just be for blogging. And from what I have seen so far, it does a great job of this.
 

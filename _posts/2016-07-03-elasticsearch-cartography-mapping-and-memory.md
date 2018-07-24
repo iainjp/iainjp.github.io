@@ -3,6 +3,7 @@ title: "Elasticsearch Cartography Mapping and Memory"
 date: 2016-07-03T12:27:25Z
 tags:
  - "elasticsearch"
+permalink: "posts/elasticsearch-cartography-mapping-and-memory"
 ---
 
 
