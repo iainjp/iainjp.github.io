@@ -15,7 +15,7 @@ title                    : "iainjp"
 title_separator          : "-"
 name                     : &name "Iain Pritchard" # &name is a YAML anchor which can be *referenced later
 description              : &description "Software engineer by day,. gig-goes by night."
-url                      : https://www.iainjp.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://iainjp.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "iainjp/iainjp.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -210,8 +210,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
       share: true
       related: true
   # _pages
@@ -269,7 +267,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
+paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
 timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
