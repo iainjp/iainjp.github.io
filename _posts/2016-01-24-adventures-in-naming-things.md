@@ -12,7 +12,7 @@ tags:
 
 Naming things is hard. This isn't a revelation (see [Martin Fowler, via Phil Karlton](http://martinfowler.com/bliki/TwoHardThings.html)), and many more people will say it after me. A name is how we communicate intent to the next reader of our code. In order to communicate that intent, the name needs to be purposeful.
 
-![Phil Karlton quote. Image: http://www.slideshare.net/gwadeloop/high-profile-editorialsitesv5](/img/adventures-in-naming-things/phil_karlton_quote.jpg)
+![Phil Karlton quote. Image: http://www.slideshare.net/gwadeloop/high-profile-editorialsitesv5](/assets/images/adventures-in-naming-things/phil_karlton_quote.jpg)
 
 
 I've been thinking about good naming and have recently experimented with different naming conventions to what I'm used to.
@@ -42,7 +42,7 @@ Looking this up more though, it's not popular with some more experienced enginee
 
 Uncle Bob mentions noise words in "Clean Code" (chapter 2). Maybe my verb-y names are similar to these? Uncle Bob was mainly calling out unnecessary affixes, like Data and Info, so perhaps not.
 
-![Uncle Bob, Clean Code. 10/10, would recommend](/img/adventures-in-naming-things/clean_code.jpg)
+![Uncle Bob, Clean Code. 10/10, would recommend](/assets/images/adventures-in-naming-things/clean_code.jpg)
 
 ---
 

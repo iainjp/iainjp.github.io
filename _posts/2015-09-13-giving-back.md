@@ -1,7 +1,7 @@
 ---
 title: "Giving Back"
 date: 2015-09-13T11:43:23Z
-draft: false
+
 ---
 
 I’ve been a fan of open source software since I found out about Linux. I remember learning about how you could install software for free and how people could help make that software better for free too, and how people did this purely just to help others. This started my fascination with installing new or different versions of Linux, and with each install I'd gain more insight into the open source community.
@@ -46,7 +46,7 @@ This makes it pretty useless for savvy web devs and actually, everyone else. The
 
 ## The future of my Open Source adventure ##
 
-![the start of something?](/img/giving-back/buildingblocks_contributions.png)
+![the start of something?](/assets/images/giving-back/buildingblocks_contributions.png)
 
 This was my first, small venture into open source. It might seem insignificant in the grand scheme of things (because it kind of is), but I think it's been successful in what it set out to do - to get me writing open source software. I'm hoping this continues, as I figure out what should be written to help others, either as a software consumer or a software developer. For now, I'm going to try and follow a mantra:
 

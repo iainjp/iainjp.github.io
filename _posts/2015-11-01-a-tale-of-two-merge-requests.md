@@ -21,7 +21,7 @@ With two cards, each tackling a different "side" of the feature, we got to work.
 
 The tasks were meant to be tackled in parallel. Each wouldn't take long, as very similar work was done prior on another email type. Following the example set by earlier work, implementation would take about a day, and would be merged the following morning. The sun would be shining and all would be well in the world. 
 
-![Cue animated animal friends and a flash dance.](/img/a-tale-of-two-merge-requests/cue_animated_birds.jpg)
+![Cue animated animal friends and a flash dance.](/assets/images/a-tale-of-two-merge-requests/cue_animated_birds.jpg)
 
 ##### What really happened... #####
 
@@ -36,11 +36,11 @@ The tasks were tackled in parallel. The work done for the earlier email type was
 
 Except, this attempt at re-use happened as part of both cards simultaneously, with little communication of the changes being made. With two attempts at **altruism**, we eventually created **chaos**. The work itself took about a week, creating two very large merge requests (one of which was too large for Gitlab to display). The merge requests themselves spanned more than 2 days. That's two full days of comments (which were quite strict, as we knew a lot of the implementation would be used again in the near future), amendments, and twice telling the squad at stand-up "I'll be working on the merge request again today...". On Friday, both cards were moved into *Ready to Deploy* and waiting in the Master branch to be released. 
 
-![97 messages, 77 changes, lots and lots of time](/img/a-tale-of-two-merge-requests/mr_changes_with_highlights.png)
+![97 messages, 77 changes, lots and lots of time](/assets/images/a-tale-of-two-merge-requests/mr_changes_with_highlights.png)
 
 Work: **done**, CI pipeline: **green**, and the code base is in a better state, thanks to the refactoring. I should feel happy with my accomplishments. But I didn't. That Friday, I looked back on the week and felt like I didn't achieve anywhere near as much as was possible, and yet I definitely did work hard because I was *exhausted*. 
 
-![Gitlab was not impressed...](/img/a-tale-of-two-merge-requests/gitlab_was_not_chuffed.png)
+![Gitlab was not impressed...](/assets/images/a-tale-of-two-merge-requests/gitlab_was_not_chuffed.png)
 
 
 ##### Why didn't this happen as planned? #####
