@@ -1,5 +1,5 @@
 ---
-format: post
+format: single
 title: About
 permalink: /about/
 ---
