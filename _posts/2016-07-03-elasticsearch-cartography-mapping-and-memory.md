@@ -1,7 +1,6 @@
 ---
 title: "Elasticsearch Cartography Mapping and Memory"
 date: 2016-07-03T12:27:25Z
-draft: false
 tags:
  - "elasticsearch"
 ---
@@ -18,7 +17,7 @@ My team at work use a combination of Kafka, Elasticsearch and Samza for reportin
 ### When the problems started...
 This increase in use was starting to cause us some issues, however. We were noticing, and receiving reports of users noticing some pretty scary error messages in Kibana. These messages would often accompany our dashboards failing to load data. In some cases, the dashboards seemingly would load but displayed incomplete and incorrect data. 
 
-![Uh oh, a thing is totally broken](/img/elasticsearch-cartography-mapping-and-memory/ES_memory_error.png)
+![Uh oh, a thing is totally broken](/assets/images/elasticsearch-cartography-mapping-and-memory/ES_memory_error.png)
 
 
 These errors were happening because Elasticsearch was running out of memory to store shards while performing aggregations on them. To understand why, we have to look at how Elasticsearch stores data in memory for these aggregations, and what Elasticsearch does for new fields without an index mapping.
@@ -28,11 +27,11 @@ These errors were happening because Elasticsearch was running out of memory to s
 
 An Elasticsearch index is keyed by terms, which give you a list of the documents containing those terms. This makes sense, as it lets you efficiently answer questions like *"What documents match these terms?"*.
 
-![An Elasticsearch index](/img/elasticsearch-cartography-mapping-and-memory/ES_index.jpg)
+![An Elasticsearch index](/assets/images/elasticsearch-cartography-mapping-and-memory/ES_index.jpg)
 
 However, aggregations over this would be difficult. Imagine asking the question "how many documents contain the term 'discovery'?". We would need to traverse all the documents to answer this question, which just doesn't scale. So instead, Elasticsearch creates **Fielddata**.
 
-![Now we can answer those aggregation questions easily!](/img/elasticsearch-cartography-mapping-and-memory/ES_fielddata.jpg)
+![Now we can answer those aggregation questions easily!](/assets/images/elasticsearch-cartography-mapping-and-memory/ES_fielddata.jpg)
 
 How these terms are stored depends on the **index mapping**, which tells Elasticsearch "This field is a string containing different terms that I want to query across, but this field should be treated this a single values that I want to match only if the input string is an exact match".
 
@@ -54,7 +53,7 @@ For string fields, dynamic mapping results is an **analysed and tokenised** fiel
 
 A surprising property of Fielddata is that by default, Elasticsearch never evicts this from memory. With a single config value, we could tell ES to evict items from memory once memory use got about a certain threshold. We did this, setting the eviction threshold to a number of values between 50% and 70%. 
 
-![Elasticsearch memory usage over time](/img/elasticsearch-cartography-mapping-and-memory/ES_memory_usage_over_time-orig.jpg)
+![Elasticsearch memory usage over time](/assets/images/elasticsearch-cartography-mapping-and-memory/ES_memory_usage_over_time-orig.jpg)
 
 The process of eviction is really aggressive for this and caused Elasticsearch to block requests and become unresponsive for users. We also noticed that ES would often get into a pickle, whereby it would be just below the threshold while at rest, and a simple query would push it above the threshold causing eviction, which would bring it down just below the threshold again and so on. This wasn’t what we were wanting at all, so we reverted the change and looked for other solutions.
 
@@ -64,7 +63,7 @@ The process of eviction is really aggressive for this and caused Elasticsearch t
 
 This was a lengthier attempt at solving the issue. We took a good hard look at the index mapping that Elasticsearch had generated for our new fields and decided which of these could be changed to no longer be analysed and tokenised. **It was pretty much all of them!** This should reduce memory footprint as we’ll no longer be storing the field as multiple separate terms.
 
-![Memory use after the mapping change](/img/elasticsearch-cartography-mapping-and-memory/ES_better_memory_profile.jpg)
+![Memory use after the mapping change](/assets/images/elasticsearch-cartography-mapping-and-memory/ES_better_memory_profile.jpg)
 
 A brilliant side-effect of this change is that we can make use of doc values. Doc values are an alternative to the in-memory inverted index that fielddata provides, which is instead created when a document is indexed and stored on disk as opposed to in-memory. Elasticsearch (as of version 1.6) doesn’t support using doc values for analysed strings, but this is [set to change](https://github.com/elastic/elasticsearch/issues/12394). 
 
