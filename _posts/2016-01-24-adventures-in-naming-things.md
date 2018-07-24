@@ -8,7 +8,7 @@ tags:
  - "naming things"
  - "design patterns"
  - "uncle bob"
-permalink: "posts/adventures-in-naming-things"
+permalink: "posts/adventures-in-naming-things/"
 ---
 
 Naming things is hard. This isn't a revelation (see [Martin Fowler, via Phil Karlton](http://martinfowler.com/bliki/TwoHardThings.html)), and many more people will say it after me. A name is how we communicate intent to the next reader of our code. In order to communicate that intent, the name needs to be purposeful.

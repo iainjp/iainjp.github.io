@@ -1,6 +1,7 @@
 ---
 title: "Giving Back"
 date: 2015-09-13T11:43:23Z
+permalink: "/posts/giving-back/"
 
 ---
 

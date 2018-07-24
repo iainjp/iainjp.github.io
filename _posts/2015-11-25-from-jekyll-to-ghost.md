@@ -6,7 +6,7 @@ tags:
  - "ghost"
  - "github"
  - "docker"
-permalink: "posts/from-jekyll-to-ghost"
+permalink: "posts/from-jekyll-to-ghost/"
 ---
 
 When I started this blog ([on a bit of a whim](https://iainjp.com/up-and-running/)), it was intended as a place to braindump some topics and opinions and little guides in a _“this was good; this is how i did it”_ way.
