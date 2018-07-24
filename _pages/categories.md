@@ -1,8 +1,8 @@
 ---
 title: "Posts"
-description: "Posts by Iain Pritchard"
+description: "Tags by Iain Pritchard"
 categories:
  - "posts"
-format: categories
-permalink: "/categories/"
+layout: tags
+permalink: "/tags/"
 ---
