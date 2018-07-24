@@ -1,4 +1,5 @@
 ---
+format: post
 title: About
 permalink: /about/
 ---
